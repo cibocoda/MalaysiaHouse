@@ -5,4 +5,11 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="tab2_title_spinner">
+        <item>租屋</item>
+        <item>中古屋</item>
+        <item>頂讓</item>
+        <item>新建案</item>
+    </string-array>
 </resources>
