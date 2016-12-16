@@ -20,6 +20,21 @@
         <item>新建案</item>
     </string-array>
 
+    <string-array name="page2_main_list">
+        <item>地區</item>
+        <item>捷運</item>
+        <item>類型</item>
+        <item>租金</item>
+        <item>格局</item>
+        <item>坪數</item>
+        <item>型態</item>
+        <item>來源</item>
+        <item>車位</item>
+        <item>陽台</item>
+        <item>養寵物</item>
+        <item>開伙</item>
+    </string-array>
+
     <string-array name="page3_main_list">
         <item>我的收藏</item>
         <item>閱覽紀錄</item>

@@ -1,11 +1,9 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.fiveteam.malaysiahouse.SecondPageFragment"
-    android:scrollbars="none">
+    tools:context="com.fiveteam.malaysiahouse.SecondPageFragment">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -54,9 +52,53 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <TextView
-        android:id="@+id/section_label"
+    <ImageView
+        android:id="@+id/IV_p2_search"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/ET_p2_search"
+        android:layout_alignBottom="@+id/ET_p2_search"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_below="@+id/appbar"
+        android:src="@drawable/ic_search_black_24dp"
+        android:background="@color/white"/>
 
-</LinearLayout>
+    <EditText
+        android:id="@+id/ET_p2_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/IV_p2_search"
+        android:layout_toEndOf="@+id/IV_p2_search"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/appbar"
+        android:background="@color/white"
+        android:textSize="24sp"
+        android:hint="請輸入搜尋條件"
+        android:gravity="left"/>
+
+    <ListView
+        android:id="@+id/LV_p2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ET_p2_search"
+        android:layout_above="@+id/block"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:background="@color/white"
+        android:scrollbars="vertical"/>
+
+    <TextView
+        android:id="@+id/block"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
