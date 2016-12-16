@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
     private int imageId[] = new ItemGroups().tabIcon;
+    private String tab_name[];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+
+        tab_name=getResources().getStringArray(R.array.main_tab_names);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
@@ -108,17 +111,7 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position) {
-                case 0:
-                    return "首頁";
-                case 1:
-                    return "搜尋";
-                case 2:
-                    return "我的";
-                case 3:
-                    return "更多";
-            }
-            return null;
+            return tab_name[position];
         }
     }
 }

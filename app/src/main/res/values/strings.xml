@@ -6,10 +6,26 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string-array name="main_tab_names">
+        <item>首頁</item>
+        <item>搜尋</item>
+        <item>我的</item>
+        <item>更多</item>
+    </string-array>
+
     <string-array name="tab2_title_spinner">
         <item>租屋</item>
         <item>中古屋</item>
         <item>頂讓</item>
         <item>新建案</item>
+    </string-array>
+
+    <string-array name="page4_main_list">
+        <item>看房筆記</item>
+        <item>喜歡東馬</item>
+        <item>留言反饋</item>
+        <item>推薦好友</item>
+        <item>訂閱設定</item>
+        <item>關於我們</item>
     </string-array>
 </resources>

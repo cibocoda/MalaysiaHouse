@@ -52,7 +52,7 @@ public class SecondPageFragment extends Fragment {
         final String aryspin[] = getResources().getStringArray(R.array.tab2_title_spinner);
         ArrayAdapter<String> aryspinList = new ArrayAdapter<>(getActivity(),
                 R.layout.spinner_style, aryspin);
-        aryspinList.setDropDownViewResource(R.layout.small_spinner_dropdown_item);
+        aryspinList.setDropDownViewResource(R.layout.spinner_dropdown_item);
         spinner.setAdapter(aryspinList);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

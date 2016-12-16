@@ -8,13 +8,15 @@ import android.view.View;
 
 public class IntroActivity extends Activity {
     private final int SPLASH_DISPLAY_LENGHT = 3000; //頁面停留時間三秒
+    private Runnable intro_run;
+    private Handler intro_handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intro);
 
-        new Handler().postDelayed(new Runnable() {
+        intro_run = new Runnable() {
             public void run() {
                 Intent mainIntent = new Intent(IntroActivity.this,
                         MainActivity.class);
@@ -22,7 +24,8 @@ public class IntroActivity extends Activity {
                 IntroActivity.this.finish();
             }
 
-        }, SPLASH_DISPLAY_LENGHT);
+        };
+        intro_handler.postDelayed(intro_run, SPLASH_DISPLAY_LENGHT);
 
     }
 
@@ -31,5 +34,6 @@ public class IntroActivity extends Activity {
                 MainActivity.class);
         IntroActivity.this.startActivity(mainIntent);
         IntroActivity.this.finish();
+        intro_handler.removeCallbacks(intro_run);
     }
 }
