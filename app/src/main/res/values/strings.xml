@@ -20,6 +20,16 @@
         <item>新建案</item>
     </string-array>
 
+    <string-array name="page3_main_list">
+        <item>我的收藏</item>
+        <item>閱覽紀錄</item>
+        <item>撥打紀錄</item>
+        <item>訊息管理</item>
+        <item>推播管理</item>
+        <item>我的訂閱</item>
+        <item>關注社區</item>
+    </string-array>
+
     <string-array name="page4_main_list">
         <item>看房筆記</item>
         <item>喜歡東馬</item>
