@@ -39,6 +39,6 @@
         android:layout_gravity="bottom"
         app:tabGravity="fill"
         app:tabMode="fixed"
-        android:background="@color/colorPrimary"/>
+        android:background="@color/house_light"/>
 
 </android.support.design.widget.CoordinatorLayout>

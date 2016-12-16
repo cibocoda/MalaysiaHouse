@@ -110,13 +110,13 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "首頁";
                 case 1:
-                    return "SECTION 2";
+                    return "搜尋";
                 case 2:
-                    return "SECTION 3";
+                    return "我的";
                 case 3:
-                    return "SECTION 4";
+                    return "更多";
             }
             return null;
         }

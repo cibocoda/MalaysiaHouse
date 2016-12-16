@@ -13,7 +13,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 /**
@@ -58,7 +57,7 @@ public class SecondPageFragment extends Fragment {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getActivity(), "你選的是" + aryspin[position], Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getActivity(), "你選的是" + aryspin[position], Toast.LENGTH_SHORT).show();
             }
 
             @Override

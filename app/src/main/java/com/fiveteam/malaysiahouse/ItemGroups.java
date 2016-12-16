@@ -5,5 +5,6 @@ package com.fiveteam.malaysiahouse;
  */
 
 public class ItemGroups {
-    int tabIcon[]={ R.drawable.others_1, R.drawable.others_3, R.drawable.others_4, R.drawable.others_6};
+    int tabIcon[]={ R.drawable.icon_home, R.drawable.ic_search_black_24dp,
+            R.drawable.ic_tag_faces_black_24dp, R.drawable.ic_apps_black_24dp};
 }
