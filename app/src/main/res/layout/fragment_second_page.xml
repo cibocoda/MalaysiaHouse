@@ -30,6 +30,7 @@
                     android:layout_height="wrap_content"
                     android:text="重選"
                     android:textSize="24sp"
+                    android:textColor="@color/white"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"/>
 
@@ -45,6 +46,7 @@
                     android:layout_height="wrap_content"
                     android:text="確定"
                     android:textSize="24sp"
+                    android:textColor="@color/white"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"/>
             </RelativeLayout>
