@@ -1,6 +1,7 @@
 package com.fiveteam.malaysiahouse;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
@@ -52,6 +53,18 @@ public class SecondPageFragment extends Fragment {
         p2Listitems=getResources().getStringArray(R.array.page2_main_list);
         mListView = (ListView) rootView.findViewById(R.id.LV_p2);
         mListView.setAdapter(new p2ListAdapter());
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Toast.makeText(getContext(), "你選擇的是" + list[position], Toast.LENGTH_SHORT).show();
+                Bundle bundle = new Bundle();
+                bundle.putString("title", p2Listitems[position]);
+                Intent intent = new Intent(getActivity(), P2slcActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
 
         Spinner spinner = (Spinner)rootView.findViewById(R.id.tab2_spinner);
         final String aryspin[] = getResources().getStringArray(R.array.tab2_title_spinner);
@@ -112,6 +125,5 @@ public class SecondPageFragment extends Fragment {
             TextView text;
         }
     }
-
 
 }

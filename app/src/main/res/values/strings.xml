@@ -74,4 +74,5 @@
         <item>訂閱設定</item>
         <item>關於我們</item>
     </string-array>
+    <string name="title_activity_p2slc">P2slcActivity</string>
 </resources>
