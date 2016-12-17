@@ -28,6 +28,12 @@
         <item>裝潢圖庫</item>
     </string-array>
 
+    <string-array name="page1_newhouse_list">
+        <item>全部建案</item>
+        <item>熱銷建案</item>
+        <item>超值建案</item>
+    </string-array>
+
     <string-array name="tab2_title_spinner">
         <item>租屋</item>
         <item>中古屋</item>
