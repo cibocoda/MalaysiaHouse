@@ -1,11 +1,10 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.fiveteam.malaysiahouse.FirstPageFragment"
-    android:scrollbars="none">
+    android:scrollbars="vertical">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -62,9 +61,20 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <TextView
-        android:id="@+id/section_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/VP_p1_ad1"
+        android:layout_below="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"/>
 
-</LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/VP_p1_selects"
+        android:layout_below="@+id/VP_p1_ad1"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+
+</RelativeLayout>

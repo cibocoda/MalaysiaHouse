@@ -13,6 +13,21 @@
         <item>更多</item>
     </string-array>
 
+    <string-array name="page1_select_list">
+        <item>租屋</item>
+        <item>中古屋</item>
+        <item>新建案</item>
+        <item>頂讓</item>
+        <item>社區找房</item>
+        <item>地圖找房</item>
+        <item>我要出租</item>
+        <item>我要出售</item>
+        <item>房貸試算</item>
+        <item>實價查詢</item>
+        <item>我的最愛</item>
+        <item>裝潢圖庫</item>
+    </string-array>
+
     <string-array name="tab2_title_spinner">
         <item>租屋</item>
         <item>中古屋</item>

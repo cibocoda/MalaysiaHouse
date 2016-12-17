@@ -15,4 +15,7 @@ public class ItemGroups {
     int page4_list_icons[]={ R.drawable.ic_event_note_black_24dp, R.drawable.ic_thumb_up_black_24dp,
             R.drawable.ic_create_black_24dp, R.drawable.ic_send_black_24dp,
             R.drawable.ic_phonelink_setup_black_24dp, R.drawable.ic_info_outline_black_24dp};
+
+    int house_images[]={ R.drawable.big_house, R.drawable.big_house2, R.drawable.nice_house,
+            R.drawable.red_house, R.drawable.white_house};
 }
