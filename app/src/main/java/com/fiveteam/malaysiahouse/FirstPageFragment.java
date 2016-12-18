@@ -38,7 +38,7 @@ public class FirstPageFragment extends Fragment {
     private int[] ad1images = new ItemGroups().house_images;
     private String[] aryslc;
     private int selectedItem = 0;
-    private TextView areaCheck;
+    private TextView areaCheck, searchBar;
 
     public FirstPageFragment() {
         // Required empty public constructor
@@ -67,6 +67,15 @@ public class FirstPageFragment extends Fragment {
                 bundle.putString("title", "地區");
                 Intent intent = new Intent(getActivity(), P2slcActivity.class);
                 intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
+        searchBar = (TextView) rootView.findViewById(R.id.TV_tab1_sreachbar);
+        searchBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), SRPageActivity.class);
                 startActivity(intent);
             }
         });
