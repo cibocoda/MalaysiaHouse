@@ -8,6 +8,8 @@
 
     <color name="black">#000000</color>
 
+    <color name="red">#ff0000</color>
+
     <color name="house_black">#A75100</color>
     <color name="house_light_black">#D46801</color>
     <color name="house_middle">#FE8B1D</color>

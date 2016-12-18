@@ -4,18 +4,67 @@
     android:layout_height="wrap_content"
     android:padding="@dimen/activity_horizontal_margin"
     android:orientation="horizontal"
-    android:gravity="left">
+    android:gravity="left"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/IV_listItem"
         android:layout_width="100dp"
-        android:layout_height="70dp"/>
+        android:layout_height="100dp"
+        android:scaleType="fitXY"/>
 
-    <TextView
-        android:id="@+id/TV_listItem"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="24sp"
-        android:gravity="center"/>
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/TV_listItem_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:gravity="top"
+            android:text="物件名稱"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/TV_listItem_intro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_listItem_name"
+            android:paddingTop="5dp"
+            android:textSize="20sp"
+            android:gravity="top"
+            android:text="物件介紹"/>
+
+        <TextView
+            android:id="@+id/TV_listItem_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_listItem_intro"
+            android:layout_toLeftOf="@+id/TV_listItem_price"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="5dp"
+            android:textSize="20sp"
+            android:gravity="top"
+            android:text="物件條件"/>
+
+        <TextView
+            android:id="@+id/TV_listItem_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_listItem_intro"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="24sp"
+            android:gravity="top"
+            android:text="物件價格"
+            android:textColor="@color/red"/>
+
+    </RelativeLayout>
 
 </LinearLayout>

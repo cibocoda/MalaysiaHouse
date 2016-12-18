@@ -158,7 +158,7 @@ public class FirstPageFragment extends Fragment {
                 v = LayoutInflater.from(getActivity()).inflate(R.layout.list_item_houseinfo, null);
                 holder = new Holder();
                 holder.image = (ImageView) v.findViewById(R.id.IV_listItem);
-                holder.text = (TextView) v.findViewById(R.id.TV_listItem);
+                //holder.text = (TextView) v.findViewById(R.id.TV_listItem);
 
                 v.setTag(holder);
             } else{
@@ -166,7 +166,7 @@ public class FirstPageFragment extends Fragment {
             }
 
             holder.image.setImageResource(ad1images[position]);
-            holder.text.setText("房屋資訊");
+            //holder.text.setText("房屋資訊");
             return v;
         }
         class Holder{

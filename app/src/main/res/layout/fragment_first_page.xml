@@ -40,6 +40,8 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:layout_alignRight="@+id/fp_tab_tv1"
+                    android:layout_alignEnd="@+id/fp_tab_tv1"
                     android:src="@drawable/ic_keyboard_arrow_down_black_24dp"/>
 
                 <TextView
@@ -117,7 +119,8 @@
                 android:layout_alignEnd="@+id/VP_p1_selects"
                 android:layout_below="@+id/TV_p1_ad2"
                 android:textSize="20sp"
-                android:text="新建案"/>
+                android:text="新建案"
+                android:background="@color/white"/>
 
             <GridView
                 android:id="@+id/GV_p1_newhouse"
@@ -139,7 +142,8 @@
                 android:layout_alignStart="@+id/VP_p1_selects"
                 android:layout_alignRight="@+id/VP_p1_selects"
                 android:layout_alignEnd="@+id/VP_p1_selects"
-                android:layout_below="@+id/GV_p1_newhouse">
+                android:layout_below="@+id/GV_p1_newhouse"
+                android:background="@color/white">
 
                 <TextView
                     android:id="@+id/TV_p1_ad3_1"
@@ -179,7 +183,8 @@
                 android:layout_alignEnd="@+id/VP_p1_selects"
                 android:layout_below="@+id/LL_p1_ad3"
                 android:textSize="20sp"
-                android:text="中古屋"/>
+                android:text="中古屋"
+                android:background="@color/white"/>
 
             <LinearLayout
                 android:id="@+id/LL_p1_ad4"
@@ -190,7 +195,8 @@
                 android:layout_alignStart="@+id/VP_p1_selects"
                 android:layout_alignRight="@+id/VP_p1_selects"
                 android:layout_alignEnd="@+id/VP_p1_selects"
-                android:layout_below="@+id/TV_p1_oldhouse_title">
+                android:layout_below="@+id/TV_p1_oldhouse_title"
+                android:background="@color/white">
 
                 <TextView
                     android:id="@+id/TV_p1_ad4_1"
@@ -234,6 +240,7 @@
                 android:id="@+id/LL_p1_ad5"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
                 android:orientation="horizontal"
                 android:layout_alignLeft="@+id/VP_p1_selects"
                 android:layout_alignStart="@+id/VP_p1_selects"
@@ -278,7 +285,8 @@
                 android:layout_alignEnd="@+id/VP_p1_selects"
                 android:layout_below="@+id/LL_p1_ad5"
                 android:textSize="20sp"
-                android:text="租屋"/>
+                android:text="租屋"
+                android:background="@color/white"/>
 
             <LinearLayout
                 android:id="@+id/LL_p1_renhouse_list"
@@ -289,7 +297,8 @@
                 android:layout_alignStart="@+id/VP_p1_selects"
                 android:layout_alignRight="@+id/VP_p1_selects"
                 android:layout_alignEnd="@+id/VP_p1_selects"
-                android:layout_below="@+id/TV_p1_renthouse_title">
+                android:layout_below="@+id/TV_p1_renthouse_title"
+                android:background="@color/white">
 
                 <TextView
                     android:id="@+id/TV_p1_renhouse_list_1"
@@ -341,7 +350,8 @@
                 android:layout_alignEnd="@+id/VP_p1_selects"
                 android:layout_below="@+id/LL_p1_renhouse_list"
                 android:textSize="20sp"
-                android:text="猜您喜歡"/>
+                android:text="猜您喜歡"
+                android:background="@color/white"/>
 
             <ListView
                 android:id="@+id/LV_p1_guess_list"
