@@ -92,7 +92,6 @@
         android:layout_below="@+id/ET_p2_search"
         android:layout_above="@+id/block"
         android:layout_margin="@dimen/activity_horizontal_margin"
-        android:background="@color/white"
         android:scrollbars="vertical"/>
 
     <TextView

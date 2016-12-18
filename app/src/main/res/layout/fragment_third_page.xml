@@ -36,19 +36,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/appbar"
-        android:layout_margin="@dimen/activity_horizontal_margin"
-        android:background="@color/white"/>
+        android:layout_above="@+id/TV_p3_login"
+        android:layout_margin="@dimen/activity_horizontal_margin"/>
 
     <TextView
         android:id="@+id/TV_p3_login"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_below="@+id/LV_p3"
         android:layout_margin="@dimen/activity_horizontal_margin"
         android:text="會員登入"
         android:textSize="24sp"
         android:textColor="@color/white"
         android:gravity="center"
-        android:background="@color/house_light_black"/>
+        android:background="@color/house_light_black"
+        android:layout_above="@+id/block"/>
+
+    <TextView
+        android:id="@+id/block"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
