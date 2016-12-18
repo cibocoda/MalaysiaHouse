@@ -1,6 +1,7 @@
 package com.fiveteam.malaysiahouse;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -37,6 +38,7 @@ public class FirstPageFragment extends Fragment {
     private int[] ad1images = new ItemGroups().house_images;
     private String[] aryslc;
     private int selectedItem = 0;
+    private TextView areaCheck;
 
     public FirstPageFragment() {
         // Required empty public constructor
@@ -56,6 +58,18 @@ public class FirstPageFragment extends Fragment {
         // Inflate the layout for this fragment
         rootView = inflater.inflate(R.layout.fragment_first_page, container, false);
         aryslc = getResources().getStringArray(R.array.page1_select_list);
+
+        areaCheck = (TextView) rootView.findViewById(R.id.fp_tab_tv1);
+        areaCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("title", "地區");
+                Intent intent = new Intent(getActivity(), P2slcActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
 
         initToolbar();
         initad1VP();
@@ -141,7 +155,7 @@ public class FirstPageFragment extends Fragment {
             View v = convertView;
             Holder holder;
             if(v == null){
-                v = LayoutInflater.from(getActivity()).inflate(R.layout.list_item3, null);
+                v = LayoutInflater.from(getActivity()).inflate(R.layout.list_item_houseinfo, null);
                 holder = new Holder();
                 holder.image = (ImageView) v.findViewById(R.id.IV_listItem);
                 holder.text = (TextView) v.findViewById(R.id.TV_listItem);

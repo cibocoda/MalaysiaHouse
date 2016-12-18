@@ -8,37 +8,45 @@
     android:fitsSystemWindows="true"
     tools:context="com.fiveteam.malaysiahouse.P2slcActivity">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/AppTheme.PopupOverlay">
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
 
-            <TextView
-                android:id="@+id/TV_p2slc_title"
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="24sp"
-                android:gravity="center"
-                android:textColor="@color/white"/>
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
 
-        </android.support.v7.widget.Toolbar>
+                <TextView
+                    android:id="@+id/TV_p2slc_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="24sp"
+                    android:gravity="center"
+                    android:textColor="@color/white"/>
 
-    </android.support.design.widget.AppBarLayout>
+            </android.support.v7.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/TV_p2slc_inside"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="36sp"
-        android:gravity="center"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <ListView
+            android:id="@+id/LV_p2slc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appbar"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:background="@color/white"
+            android:scrollbars="vertical"/>
+
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>

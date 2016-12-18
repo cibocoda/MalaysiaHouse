@@ -1,6 +1,7 @@
 package com.fiveteam.malaysiahouse;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
@@ -9,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -51,6 +53,17 @@ public class FourthPageFragment extends Fragment {
         p4Listitems=getResources().getStringArray(R.array.page4_main_list);
         mListView = (ListView) rootView.findViewById(R.id.LV_p4);
         mListView.setAdapter(new p4ListAdapter());
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Toast.makeText(getContext(), "你選擇的是" + list[position], Toast.LENGTH_SHORT).show();
+                Bundle bundle = new Bundle();
+                bundle.putString("title", p4Listitems[position]);
+                Intent intent = new Intent(getActivity(), P2slcActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
         return rootView;
     }
 
@@ -76,7 +89,7 @@ public class FourthPageFragment extends Fragment {
             View v = convertView;
             Holder holder;
             if(v == null){
-                v = LayoutInflater.from(getActivity()).inflate(R.layout.list_item, null);
+                v = LayoutInflater.from(getActivity()).inflate(R.layout.list_item_page34, null);
                 holder = new Holder();
                 holder.image = (ImageView) v.findViewById(R.id.IV_listItem);
                 holder.text = (TextView) v.findViewById(R.id.TV_listItem);

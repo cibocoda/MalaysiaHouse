@@ -40,6 +40,7 @@
         android:background="@color/white"/>
 
     <TextView
+        android:id="@+id/TV_p3_login"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:layout_below="@+id/LV_p3"

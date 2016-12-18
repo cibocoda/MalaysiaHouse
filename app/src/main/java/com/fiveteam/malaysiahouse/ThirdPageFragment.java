@@ -1,6 +1,7 @@
 package com.fiveteam.malaysiahouse;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
@@ -9,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -23,6 +25,8 @@ public class ThirdPageFragment extends Fragment {
     private int imageId[]=new ItemGroups().page3_list_icons;
     private String p3Listitems[];
     private ListView mListView;
+    private TextView mLogin;
+    private View rootView;
 
     public ThirdPageFragment() {
         // Required empty public constructor
@@ -40,7 +44,7 @@ public class ThirdPageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.fragment_third_page, container, false);
+        rootView = inflater.inflate(R.layout.fragment_third_page, container, false);
 
         Toolbar toolbar = (Toolbar) rootView.findViewById(R.id.toolbar);
         ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
@@ -51,6 +55,29 @@ public class ThirdPageFragment extends Fragment {
         p3Listitems=getResources().getStringArray(R.array.page3_main_list);
         mListView = (ListView) rootView.findViewById(R.id.LV_p3);
         mListView.setAdapter(new p3ListAdapter());
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //Toast.makeText(getContext(), "你選擇的是" + list[position], Toast.LENGTH_SHORT).show();
+                Bundle bundle = new Bundle();
+                bundle.putString("title", p3Listitems[position]);
+                Intent intent = new Intent(getActivity(), P2slcActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
+        mLogin = (TextView) rootView.findViewById(R.id.TV_p3_login);
+        mLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("title", mLogin.getText().toString());
+                Intent intent = new Intent(getActivity(), P2slcActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
 
         return rootView;
     }
@@ -77,7 +104,7 @@ public class ThirdPageFragment extends Fragment {
             View v = convertView;
             Holder holder;
             if(v == null){
-                v = LayoutInflater.from(getActivity()).inflate(R.layout.list_item, null);
+                v = LayoutInflater.from(getActivity()).inflate(R.layout.list_item_page34, null);
                 holder = new Holder();
                 holder.image = (ImageView) v.findViewById(R.id.IV_listItem);
                 holder.text = (TextView) v.findViewById(R.id.TV_listItem);

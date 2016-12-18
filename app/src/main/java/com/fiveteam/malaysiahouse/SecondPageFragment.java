@@ -109,7 +109,7 @@ public class SecondPageFragment extends Fragment {
             View v = convertView;
             Holder holder;
             if(v == null){
-                v = LayoutInflater.from(getActivity()).inflate(R.layout.list_item2, null);
+                v = LayoutInflater.from(getActivity()).inflate(R.layout.list_item_page2, null);
                 holder = new Holder();
                 holder.text = (TextView) v.findViewById(R.id.TV_listItem);
 
